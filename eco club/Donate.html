@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Club</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+   <link rel="stylesheet" href="ecostyle.css">
+
+   <style>
+           .donation-form-section {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .donation-box {
+        background: #4CAF50;
+        padding: 15px;
+        color: white;
+        font-size: 18px;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .donation-amount {
+        font-size: 22px;
+    }
+
+    .donation-options {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 15px 0;
+    }
+
+    .donation-btn {
+        background: #f5f5f5;
+        border: none;
+        padding: 10px 15px;
+        font-size: 14px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+
+    .donation-btn.active,
+    .donation-btn:hover {
+        background: #4CAF50;
+        color: white;
+    }
+
+    .donation-form h3 {
+        font-size: 18px;
+        margin: 15px 0;
+        color: #333;
+    }
+
+    .form-group {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .form-group input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    .payment-method {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        margin: 10px 0;
+    }
+
+    .payment-method label {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .donate-btn {
+        width: 100%;
+        background: #4CAF50;
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: 0.3s;
+    }
+
+    .donate-btn:hover {
+        background: #45a049;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+        .form-group {
+            flex-direction: column;
+        }
+
+        .form-group input {
+            width: 100%;
+        }
+
+        .donation-options {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+   </style>
+</head>
+<body>
+    <header id="navbar">
+        <div class="logo">EcoClub</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Ecoevent.html">Events</a></li>
+            <li><a href="tutorial.html">Tutorial</a></li>
+            <li><a href="Donate.html">Donate </a></li>
+
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </header>
+    
+    <section id="home" class="hero">
+        <div class="carousel">
+            <div><img src="Images/Wallpaper.jpg" alt="Eco Nature 1"></div>
+            <div><img src="Images/wallpaper2.jpg" alt="Eco Nature 2"></div>
+            <div><img src="Images/wallpaper3.png" alt="Eco Nature 3"></div>
+        </div>
+        <div class="hero-text">
+            <h1>Be Safe, Control Environment</h1>
+            <p>Join us in making the planet greener and cleaner.</p>
+        </div>
+    </section>
+
+    <section class="donation-section">
+        <h2 class="section-title">Building a Greener Future<br>Donation Money</h2>
+        
+        <div class="donation-container">
+            <!-- Card 1 -->
+            <div class="donation-card">
+                <img src="Images/donation1.png" alt="Tree Plantation">
+                <div class="donation-content">
+                    <h3>Fund Raising for Tree Plantation – 2024</h3>
+                    <p>Cultivate worldwide tailers through nature professionally engineer high</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%;"></div>
+                    </div>
+                    <p><strong>85%</strong></p>
+                    <p><strong>Raised:</strong> Rs.780.00 <span class="goal"><strong>Goal:</strong> Rs.1000.00</span></p>
+                </div>
+            </div>
+    
+            <!-- Card 2 -->
+            <div class="donation-card">
+                <img src="Images/donation-2.png" alt="Forest Recycling">
+                <div class="donation-content">
+                    <h3>Fund Raising for Forest Recycling & Repair</h3>
+                    <p>Cultivate worldwide tailers through nature professionally engineer high</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 65%;"></div>
+                    </div>
+                    <p><strong>65%</strong></p>
+                    <p><strong>Raised:</strong> Rs. 780.00 <span class="goal"><strong>Goal:</strong> Rs.1000.00</span></p>
+                </div>
+            </div>
+    
+            <!-- Card 3 -->
+            <div class="donation-card">
+                <img src="Images/donation-3.png" alt="Recycling Clean">
+                <div class="donation-content">
+                    <h3>Environmental Dust Clean And Recycling</h3>
+                    <p>Cultivate worldwide tailers through nature professionally engineer high</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div>
+                    </div>
+                    <p><strong>90%</strong></p>
+                    <p><strong>Raised:</strong> Rs.780.00 <span class="goal"><strong>Goal:</strong> Rs.1000.00</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="donation-form-section">
+        <div class="donation-box">
+            <h3>Your Donation :</h3>
+            <span class="donation-amount">$15</span>
+        </div>
+    
+        <div class="donation-options">
+            <button class="donation-btn" onclick="updateAmount(10)">$10</button>
+            <button class="donation-btn active" onclick="updateAmount(15)">$15</button>
+            <button class="donation-btn" onclick="updateAmount(20)">$20</button>
+            <button class="donation-btn" onclick="updateAmount(30)">$30</button>
+            <button class="donation-btn" onclick="updateAmount(50)">$50</button>
+            <button class="donation-btn" onclick="updateAmount(100)">$100</button>
+        </div>
+    
+        <form class="donation-form">
+            <h3>Details of You</h3>
+            <div class="form-group">
+                <input type="text" placeholder="Enter First Name" required>
+                <input type="text" placeholder="Enter Last Name" required>
+            </div>
+    
+            <div class="form-group">
+                <input type="email" placeholder="Your E-Mail Address" required>
+                <input type="text" placeholder="Enter Phone No" required>
+            </div>
+    
+            <div class="form-group">
+                <input type="text" placeholder="Address Line-1*" required>
+                <input type="text" placeholder="Address Line-2">
+            </div>
+    
+            <div class="form-group">
+                <input type="text" placeholder="Enter Your City" required>
+                <input type="text" placeholder="Enter Zip Code" required>
+            </div>
+    
+            <h3>Select Payment Method</h3>
+            <div class="payment-method">
+                <label><input type="radio" name="payment" checked> PayPal</label>
+                <label><input type="radio" name="payment"> Offline Donation</label>
+            </div>
+    
+            <button type="submit" class="donate-btn">Donate Now</button>
+        </form>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>🌿 Eco club</h3>
+            </div>
+            <div class="footer-column">
+                <h3>About</h3>
+                <ul>
+                    <li><a href="#">Who We Are</a></li>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Service</h3>
+                <ul>
+                    <li><a href="tutorial.html">Tutorial</a></li>
+                    <li><a href="Ecoevent.html">Event</a></li>
+                    <li><a href="index.html">Action</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contact Info</h3>
+                <div class="contact-info">
+                    <p>📍 New Delhi, India</p>
+                    <p>📧 <a href="mailto:Greenrise@Gmail.com">pranjal123@Gmail.com</a></p>
+                    <p>📞 551-515-5555</p>
+                </div>
+                <div class="social-icons">
+                    <a href="#">F</a>
+                    <a href="#">G</a>
+                    <a href="#">I</a>
+                    <a href="#">X</a>
+                    <a href="#">Y</a>
+                </div>
+            </div>
+        </div><hr>
+        <div class="copyright">
+            @2025 Eco Club.copyright
+        </div>
+    </footer>
+
+
+    <script>
+        function updateAmount(amount) {
+            // Update displayed donation amount
+            document.querySelector(".donation-amount").textContent = "$" + amount;
+    
+            // Remove active class from all buttons
+            document.querySelectorAll(".donation-btn").forEach(btn => {
+                btn.classList.remove("active");
+            });
+    
+            // Add active class to clicked button
+            event.target.classList.add("active");
+        }
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        $(document).ready(function(){
+            $('.carousel').slick({
+                autoplay: true,
+                autoplaySpeed: 3000,
+                dots: true,
+                arrows: false,
+                infinite: true,
+                speed: 500,
+                fade: true,
+                cssEase: 'linear'
+            });
+        });
+
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+    </body>
+    </html>
